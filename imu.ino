@@ -135,9 +135,6 @@ void readSensor() {
   Wire.endTransmission();              // End the transmission
   Wire.requestFrom(MPU_ADDRESS, 14);   // Request 14 bytes from the MPU-6050
 
-  // Wait until all the bytes are received
-  while (Wire.available() < 14);
-
   acc_raw[X]  = Wire.read() << 8 | Wire.read(); // Add the low and high byte to the acc_raw[X] variable
   acc_raw[Y]  = Wire.read() << 8 | Wire.read(); // Add the low and high byte to the acc_raw[Y] variable
   acc_raw[Z]  = Wire.read() << 8 | Wire.read(); // Add the low and high byte to the acc_raw[Z] variable
