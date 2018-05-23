@@ -178,7 +178,7 @@ void calculateAngles()
  */
 void calculateGyroAngles()
 {
-  // Substract offsets
+  // Subtract offsets
   gyro_raw[X] -= gyro_offset[X];
   gyro_raw[Y] -= gyro_offset[Y];
   gyro_raw[Z] -= gyro_offset[Z];
