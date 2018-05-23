@@ -170,7 +170,7 @@ void calculateAngles()
   // To dampen the pitch and roll angles a complementary filter is used
   measures[ROLL]  = measures[ROLL]  * 0.9 + gyro_angle[X] * 0.1;
   measures[PITCH] = measures[PITCH] * 0.9 + gyro_angle[Y] * 0.1;
-  measures[YAW]   = gyro_raw[Z] / SSF_GYRO; // Store the angular motion for this axis
+  measures[YAW]   = -gyro_raw[Z] / SSF_GYRO; // Store the angular motion for this axis
 }
 
 /**
