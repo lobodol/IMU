@@ -209,5 +209,3 @@ void calculateAccelerometerAngles()
     acc_angle[Y] = asin((float)acc_raw[X] / acc_total_vector) * (180 / PI);
   }
 }
-
-
